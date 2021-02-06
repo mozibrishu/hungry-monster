@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,34 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
 </head>
+
 <body>
-    
+    <main class="container">
+        <form class="col-10  col-md-8 col-lg-7 col-xl-6 m-auto pt-5 pb-2">
+            <div class="input-group mb-1">
+                <input id="input-meal-name" type="text" required class="form-control" placeholder="Search for meal">
+                <div class="input-group-append">
+                    <button id="search-btn" type="button" class="btn">Search</button>
+                </div>
+            </div>
+            <div style="height: 30px;margin-bottom: 0;">
+                <p id="warning-text"></p>
+            </div>
+        </form>
+        <div class="meal-container">
+            <div id="meal-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+
+            </div>
+
+        </div>
+        <ul id="ul">
+
+        </ul>
+    </main>
+
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
