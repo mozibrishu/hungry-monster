@@ -10,7 +10,9 @@
 #warning-text{
     color:  #F06C4E;
     padding-left: 2%;
+    height: 100%;
 }
+
 
 .meal-image{
     width: 100%;
@@ -25,4 +27,34 @@
     background-color: #F8F7F5;
     height: 100%;
     overflow: hidden;
+    box-shadow:1px 3px 10px gray;
+}
+
+.meal-details-image{
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#meal-details{
+    display: none;
+    margin-bottom: 15px;
+    background-color: #F8F7F5;
+    padding: 20px;
+
+    border-radius: 10px;
+}
+li{
+    font-size: large;
+}
+
+ul{
+    list-style-type:none;
+}
+.instructions{
+    text-align: justify;
+}
+
+.icon-color{
+    color: #F06C4E;
 }
