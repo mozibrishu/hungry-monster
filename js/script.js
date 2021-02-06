@@ -3,6 +3,7 @@ document.getElementById("search-btn").addEventListener("click", function () {
     document.getElementById("meal-details").style.display = 'none';
     
     const inputMealName = document.getElementById("input-meal-name").value;
+    document.getElementById("input-meal-name").value = "";
     const mealName = inputMealName.trim();
 
     if (mealName === "") {
@@ -12,7 +13,7 @@ document.getElementById("search-btn").addEventListener("click", function () {
             .then(res => res.json())
             .then(data => {
                 if (data.meals === null) {
-                    showWarning("No meal found. Please try again.")
+                    showWarning(`No meal found with name \"${mealName}\". Please try again.`)
                 } else {
                     processData(data.meals);
                 }
@@ -49,7 +50,7 @@ function displayMealDetails(meal){
     document.getElementById("meal-details-display").innerHTML = `
     <div class="text-center">
         <img src="${meal.strMealThumb}" class="meal-details-image">
-        <h3>${meal.strMeal}</h3>
+        <h3 class="meal-details-title">${meal.strMeal}</h3>
     </div>
     <div>
         <h4>  Ingredients</h4>
@@ -65,7 +66,7 @@ function displayMealDetails(meal){
     for(let i=1;i<=20;i++){
         let ingredient = 'strIngredient'+i;
         let quantity = 'strMeasure'+i;
-        if(meal[ingredient] === ""){
+        if(meal[ingredient] === ""|| meal[ingredient]==null){
             break;
         }
         const li = document.createElement("li");
@@ -75,6 +76,7 @@ function displayMealDetails(meal){
         document.getElementById("ingredient-list").appendChild(li)
     }
     document.getElementById("meal-details").style.display = "block";
+    document.getElementById("meal-details").scrollIntoView({behavior: "smooth"});
 }
 
 
