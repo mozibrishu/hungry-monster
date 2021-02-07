@@ -1,3 +1,15 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+#title-full{
+    color: #363958;
+    font-weight: 700;
+}
+#title-monster{
+    color: #FA804C;
+}
+
 #input-meal-name{
     background-color: #F8F7F5
 }
