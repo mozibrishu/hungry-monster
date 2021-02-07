@@ -24,6 +24,11 @@ document.getElementById("search-btn").addEventListener("click", function () {
     }
 })
 
+// Search: Enter key trigger.
+document.getElementById("input-meal-name").addEventListener("keyup", event => {
+    if (event.key === "Enter") document.getElementById("search-btn").click();
+});
+
 function showWarning(warningText) {
     document.getElementById("warning-text").innerText = warningText;
 }
@@ -45,6 +50,7 @@ function displayFoundMeals(meals) {
     });
 }
 
+// fetching single meal details
 function mealDetails(mealId) {
     console.log(mealId);
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
@@ -54,6 +60,7 @@ function mealDetails(mealId) {
         })
 }
 
+// displaying single meal details
 function displayMealDetails(meal) {
     document.getElementById("meal-details-display").innerHTML = `
     <div class="text-center">
