@@ -1,11 +1,10 @@
 document.getElementById("search-btn").addEventListener("click", function () {
-    // removing warning text and hiding mealDetails section
-    showWarning("");
-    document.getElementById("meal-details").style.display = 'none';
+    // removing warning text
+    showWarning("");    
 
-    const inputMealName = document.getElementById("input-meal-name").value;
+    let mealName = document.getElementById("input-meal-name").value;
     // trimming empty spaces
-    const mealName = inputMealName.trim();
+    mealName = mealName.trim();
 
     if (mealName === "") {
         showWarning("Please Enter a meal name.")
@@ -35,8 +34,9 @@ function showWarning(warningText) {
 
 
 function displayFoundMeals(meals) {
-    // clearing previous search result
+    // clearing previous search result and hiding single meal-details section
     document.getElementById("meal-list").innerHTML = "";
+    document.getElementById("meal-details").style.display = 'none';
 
     meals.forEach(meal => {
         const mealDiv = document.createElement("div");
@@ -52,7 +52,6 @@ function displayFoundMeals(meals) {
 
 // fetching single meal details
 function mealDetails(mealId) {
-    console.log(mealId);
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
         .then(res => res.json())
         .then(data => {
@@ -85,9 +84,7 @@ function displayMealDetails(meal) {
         let ingredient = 'strIngredient' + i;
         let quantity = 'strMeasure' + i;
 
-        if (meal[ingredient] === "" || meal[ingredient] == null) {
-            break;
-        }
+        if (meal[ingredient] === "" || meal[ingredient] == null) break;
 
         const li = document.createElement("li");
         li.innerHTML = `
