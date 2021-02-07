@@ -4,8 +4,6 @@ document.getElementById("search-btn").addEventListener("click", function () {
     document.getElementById("meal-details").style.display = 'none';
 
     const inputMealName = document.getElementById("input-meal-name").value;
-    document.getElementById("input-meal-name").value = "";
-
     // trimming empty spaces
     const mealName = inputMealName.trim();
 
@@ -22,6 +20,8 @@ document.getElementById("search-btn").addEventListener("click", function () {
                 }
             })
     }
+    // clearing input field
+    document.getElementById("input-meal-name").value = "";
 })
 
 // Search: Enter key trigger.
@@ -75,7 +75,7 @@ function displayMealDetails(meal) {
     </div>
     `;
 
-    // Displaying meals instructions.
+    // Displaying meal instructions.
     document.getElementById("instruction-display").innerHTML = `
     <p class="instructions">${meal.strInstructions}</p>
     `;
