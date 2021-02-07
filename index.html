@@ -18,7 +18,8 @@
         <!-- navbar -->
         <nav class="container navbar navbar-expand-lg navbar-light pt-2">
             <div class="container-fluid">
-                <a class="navbar-brand me-auto" href="#"><img src="images/Logo.png" width="50em" alt="Image nai"><span id="title-full">Hungry <span id="title-monster">Monster</span></span></a>
+                <a class="navbar-brand me-auto" href="#"><img src="images/Logo.png" width="50em" alt="Logo"><span
+                        id="title-full">Hungry <span id="title-monster">Monster</span></span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -34,24 +35,27 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Search and Warning -->
+        <div class="container">
+            <form class="col-10  col-md-8 col-lg-7 col-xl-6 m-auto pt-1 pb-2">
+                <div class="input-group mb-1">
+                    <!-- Search Box -->
+                    <input id="input-meal-name" type="text" required class="form-control" placeholder="Search for meal">
+                    <div class="input-group-append">
+                        <button id="search-btn" type="button" class="btn">Search</button>
+                    </div>
+                </div>
+
+                <!-- Warning Text: If no meal found or Empty Search Box -->
+                <div style="height: 30px;margin-bottom: 10px;">
+                    <p id="warning-text"></p>
+                </div>
+            </form>
+        </div>
     </header>
 
     <main class="container">
-        <form class="col-10  col-md-8 col-lg-7 col-xl-6 m-auto pt-1 pb-2">
-            <div class="input-group mb-1">
-                <!-- Search Box -->
-                <input id="input-meal-name" type="text" required class="form-control" placeholder="Search for meal">
-                <div class="input-group-append">
-                    <button id="search-btn" type="button" class="btn">Search</button>
-                </div>
-            </div>
-
-            <!-- Warning Text: If no meal found or Empty Search Box -->
-            <div style="height: 30px;margin-bottom: 10px;">
-                <p id="warning-text"></p>
-            </div>
-        </form>
-
         <!-- Display: Single meal Details. Default:Hidden -->
         <div id="meal-details" class="container">
             <div id="meal-details-display" class="row row-cols-1  row-cols-md-2 g-1">

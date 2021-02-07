@@ -10,15 +10,14 @@ body{
     color: #FA804C;
 }
 
+
 #input-meal-name{
     background-color: #F8F7F5
 }
-
 #search-btn{
     color: white;
     background-color: #F06C4E;
 }
-
 #warning-text{
     color:  #F06C4E;
     padding-left: 2%;
@@ -29,7 +28,6 @@ body{
 .meal-image{
     width: 100%;
 }
-
 .meal-title{
     text-align: center;
     margin-top: 10px;
@@ -42,11 +40,6 @@ body{
     box-shadow:1px 3px 10px gray;
 }
 
-.meal-details-image{
-    width: 80%;
-    margin: auto;
-    border-radius: 20px;
-}
 
 #meal-details{
     display: none;
@@ -55,20 +48,26 @@ body{
     padding: 20px;
     border-radius: 10px;
 }
+.meal-details-image{
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+}
+.meal-details-title{
+    margin-top: 15px;
+    color: #363958;
+    font-weight: 600;
+}
+
 li{
     font-size: large;
 }
-
 ul{
     list-style-type:none;
 }
 .instructions{
     text-align: justify;
 }
-
 .icon-color{
     color: #F06C4E;
-}
-.meal-details-title{
-    margin-top: 15px;
 }
