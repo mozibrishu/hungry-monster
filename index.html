@@ -11,31 +11,58 @@
 </head>
 
 <body>
+    <header>
+        <!-- navbar -->
+        <nav class="container navbar navbar-expand-lg navbar-light pt-2">
+            <div class="container-fluid">
+                <a class="navbar-brand me-auto" href="#"><img src="" width="100em" alt="Image nai"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link mx-1" href="#">Home</a>
+                        <a class="nav-link mx-1" href="#">About</a>
+                        <a class="nav-link mx-1" href="#">Recipes</a>
+                        <a class="nav-link mx-1" href="#">blog</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <main class="container">
-        <form class="col-10  col-md-8 col-lg-7 col-xl-6 m-auto pt-5 pb-2">
+        <form class="col-10  col-md-8 col-lg-7 col-xl-6 m-auto pt-1 pb-2">
             <div class="input-group mb-1">
+                <!-- Search Box -->
                 <input id="input-meal-name" type="text" required class="form-control" placeholder="Search for meal">
                 <div class="input-group-append">
                     <button id="search-btn" type="button" class="btn">Search</button>
                 </div>
             </div>
+
+            <!-- Warning Text: If no meal found or Empty Search Box -->
             <div style="height: 30px;margin-bottom: 10px;">
                 <p id="warning-text"></p>
             </div>
         </form>
 
+        <!-- Display: Single meal Details. Default:Hidden -->
         <div id="meal-details" class="container">
             <div id="meal-details-display" class="row row-cols-1  row-cols-md-2 g-1">
-
+                <!-- Dynamically -->
             </div>
             <div id="instruction-display">
-                
+                <!-- Dynamically -->
             </div>
         </div>
 
-        <div class="meal-container">
+        <!-- Display: Search result -->
+        <div class="meal-container mb-5">
             <div id="meal-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
-
+                <!-- Dynamically -->
             </div>
         </div>
     </main>
