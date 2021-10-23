@@ -1,3 +1,9 @@
+let checkMealName = String.fromCharCode('a'.charCodeAt(0) + Math.floor(Math.random() * 26));
+fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${checkMealName}`)
+            .then(res => res.json())
+            .then(data => {
+                    displayFoundMeals(data.meals);
+            })
 document.getElementById("search-btn").addEventListener("click", function () {
     // removing warning text
     showWarning("");    
